@@ -17,3 +17,5 @@ for listing in soup.find_all('div', class_='rental-listing'):
     rental_data.append({'Price': price, 'Location': location, 'Amenities': amenities})
 
 df_rental = pd.DataFrame(rental_data)
+
+df_rental.to_csv('rental_data.csv', index=False)
